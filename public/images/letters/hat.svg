@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="hat-gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A4A4A" />
+      <stop offset="100%" stop-color="#2C2C2C" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Brim -->
+  <rect x="10" y="60" width="80" height="10" rx="5" fill="#2C2C2C" />
+
+  <!-- Crown -->
+  <path d="M 20,60 C 20,30 80,30 80,60 Z" fill="url(#hat-gradient)" />
+
+  <!-- Band -->
+  <rect x="18" y="55" width="64" height="8" fill="#A52A2A" />
+
+  <!-- Shine -->
+  <path d="M 30,35 A 20 20 0 0 1 50 35 A 25 25 0 0 1 30 35" fill="white" opacity="0.1" />
+</svg>

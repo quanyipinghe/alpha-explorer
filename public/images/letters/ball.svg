@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="ball-gradient" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="80%" stop-color="#FFA500" />
+      <stop offset="100%" stop-color="#FF8C00" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Ball Body -->
+  <circle cx="50" cy="50" r="40" fill="url(#ball-gradient)" />
+
+  <!-- Stripes -->
+  <path d="M 20,30 C 40,20 60,20 80,30" stroke="#FF4500" stroke-width="5" fill="none" />
+  <path d="M 15,50 C 35,40 65,40 85,50" stroke="#FF4500" stroke-width="5" fill="none" />
+  <path d="M 20,70 C 40,80 60,80 80,70" stroke="#FF4500" stroke-width="5" fill="none" />
+
+  <!-- Shine -->
+  <path d="M 35,25 A 20 20 0 0 1 55 25 A 25 25 0 0 1 35 25" fill="white" opacity="0.3" />
+</svg>

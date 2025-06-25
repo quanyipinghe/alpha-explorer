@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="octopus-gradient" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FF69B4" />
+      <stop offset="100%" stop-color="#C71585" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Head -->
+  <circle cx="50" cy="40" r="25" fill="url(#octopus-gradient)" />
+
+  <!-- Eyes -->
+  <circle cx="40" cy="35" r="5" fill="white" />
+  <circle cx="60" cy="35" r="5" fill="white" />
+  <circle cx="40" cy="35" r="2" fill="black" />
+  <circle cx="60" cy="35" r="2" fill="black" />
+
+  <!-- Tentacles -->
+  <path d="M 30,60 C 10,70 10,90 30,90" stroke="#C71585" stroke-width="8" fill="none" stroke-linecap="round" />
+  <path d="M 40,65 C 30,80 30,95 40,95" stroke="#C71585" stroke-width="8" fill="none" stroke-linecap="round" />
+  <path d="M 50,65 C 50,80 50,95 50,95" stroke="#C71585" stroke-width="8" fill="none" stroke-linecap="round" />
+  <path d="M 60,65 C 70,80 70,95 60,95" stroke="#C71585" stroke-width="8" fill="none" stroke-linecap="round" />
+  <path d="M 70,60 C 90,70 90,90 70,90" stroke="#C71585" stroke-width="8" fill="none" stroke-linecap="round" />
+</svg>

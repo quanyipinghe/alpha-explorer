@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="apple-gradient" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FF4B4B" />
+      <stop offset="80%" stop-color="#D90000" />
+      <stop offset="100%" stop-color="#A30000" />
+    </radialGradient>
+    <linearGradient id="leaf-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6DAB4A" />
+      <stop offset="100%" stop-color="#4C7E33" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Apple Body -->
+  <path d="M 85,50 C 85,75 65,95 50,95 C 35,95 15,75 15,50 C 15,25 35,20 50,20 C 65,20 85,25 85,50 Z" fill="url(#apple-gradient)" />
+  
+  <!-- Dimple -->
+  <path d="M 50,20 C 45,28 55,28 50,20" fill="#C94141" />
+  <path d="M 50,95 C 45,87 55,87 50,95" fill="#A30000" opacity="0.5" />
+
+  <!-- Stem -->
+  <path d="M 50 22 C 50 15, 55 10, 58 5" stroke="#754C24" stroke-width="3" fill="none" stroke-linecap="round" />
+  
+  <!-- Leaf -->
+  <path d="M 58 8 C 65 0, 80 5, 75 15 C 70 25, 60 15, 58 8 Z" fill="url(#leaf-gradient)" stroke="#4C7E33" stroke-width="0.5" />
+
+  <!-- Shine -->
+  <path d="M 65,30 A 20 20 0 0 1 75 50 A 25 25 0 0 1 65 30" fill="white" opacity="0.3" />
+</svg>

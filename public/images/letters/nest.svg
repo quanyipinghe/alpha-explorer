@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="nest-gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D2B48C" />
+      <stop offset="100%" stop-color="#8B4513" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Nest -->
+  <path d="M 10,60 C 10,80 90,80 90,60 C 90,40 10,40 10,60 Z" fill="url(#nest-gradient)" />
+  <path d="M 15,55 C 15,75 85,75 85,55" stroke="#8B4513" stroke-width="2" fill="none" />
+  <path d="M 20,50 C 20,70 80,70 80,50" stroke="#8B4513" stroke-width="2" fill="none" />
+
+  <!-- Eggs -->
+  <circle cx="40" cy="55" r="8" fill="#F0E68C" />
+  <circle cx="55" cy="58" r="8" fill="#F0E68C" />
+  <circle cx="65" cy="50" r="8" fill="#F0E68C" />
+</svg>

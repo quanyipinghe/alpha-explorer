@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="dog-gradient" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#A0522D" />
+      <stop offset="80%" stop-color="#8B4513" />
+      <stop offset="100%" stop-color="#653209" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Head -->
+  <circle cx="50" cy="50" r="30" fill="url(#dog-gradient)" />
+
+  <!-- Ears -->
+  <path d="M 20,40 C 10,60 20,70 30,60 Z" fill="#8B4513" />
+  <path d="M 80,40 C 90,60 80,70 70,60 Z" fill="#8B4513" />
+
+  <!-- Eyes -->
+  <circle cx="40" cy="45" r="5" fill="white" />
+  <circle cx="60" cy="45" r="5" fill="white" />
+  <circle cx="40" cy="45" r="2" fill="black" />
+  <circle cx="60" cy="45" r="2" fill="black" />
+
+  <!-- Nose -->
+  <circle cx="50" cy="55" r="5" fill="black" />
+
+  <!-- Mouth -->
+  <path d="M 40,65 C 45,70 55,70 60,65" stroke="black" stroke-width="2" fill="none" stroke-linecap="round" />
+</svg>

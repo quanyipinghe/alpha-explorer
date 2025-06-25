@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="elephant-gradient" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#B0C4DE" />
+      <stop offset="80%" stop-color="#778899" />
+      <stop offset="100%" stop-color="#708090" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Head -->
+  <circle cx="50" cy="50" r="30" fill="url(#elephant-gradient)" />
+
+  <!-- Ears -->
+  <path d="M 20,50 C 0,30 10,10 30,20 Z" fill="#778899" />
+  <path d="M 80,50 C 100,30 90,10 70,20 Z" fill="#778899" />
+
+  <!-- Eyes -->
+  <circle cx="40" cy="45" r="4" fill="white" />
+  <circle cx="60" cy="45" r="4" fill="white" />
+  <circle cx="40" cy="45" r="2" fill="black" />
+  <circle cx="60" cy="45" r="2" fill="black" />
+
+  <!-- Trunk -->
+  <path d="M 50,60 C 50,80 30,85 40,95" stroke="#778899" stroke-width="8" fill="none" stroke-linecap="round" />
+
+  <!-- Tusks -->
+  <path d="M 35,70 C 25,75 25,85 35,85" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" />
+  <path d="M 65,70 C 75,75 75,85 65,85" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" />
+</svg>

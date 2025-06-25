@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="cat-gradient" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFA500" />
+      <stop offset="80%" stop-color="#FF8C00" />
+      <stop offset="100%" stop-color="#CD6600" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Head -->
+  <circle cx="50" cy="50" r="30" fill="url(#cat-gradient)" />
+
+  <!-- Ears -->
+  <path d="M 25,25 L 40,10 L 45,25 Z" fill="url(#cat-gradient)" stroke="#CD6600" stroke-width="1" />
+  <path d="M 75,25 L 60,10 L 55,25 Z" fill="url(#cat-gradient)" stroke="#CD6600" stroke-width="1" />
+
+  <!-- Eyes -->
+  <circle cx="40" cy="45" r="5" fill="white" />
+  <circle cx="60" cy="45" r="5" fill="white" />
+  <circle cx="40" cy="45" r="2" fill="black" />
+  <circle cx="60" cy="45" r="2" fill="black" />
+
+  <!-- Nose -->
+  <path d="M 48,55 L 52,55 L 50,58 Z" fill="#FFC0CB" />
+
+  <!-- Whiskers -->
+  <path d="M 20,50 C 30,50 40,55 45,55" stroke="black" stroke-width="1" fill="none" />
+  <path d="M 20,55 C 30,55 40,60 45,60" stroke="black" stroke-width="1" fill="none" />
+  <path d="M 80,50 C 70,50 60,55 55,55" stroke="black" stroke-width="1" fill="none" />
+  <path d="M 80,55 C 70,55 60,60 55,60" stroke="black" stroke-width="1" fill="none" />
+</svg>

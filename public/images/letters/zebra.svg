@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Body -->
+  <rect x="20" y="30" width="60" height="40" fill="white" />
+
+  <!-- Head -->
+  <circle cx="75" cy="40" r="15" fill="white" />
+  <circle cx="80" cy="35" r="3" fill="black" />
+
+  <!-- Legs -->
+  <rect x="25" y="70" width="10" height="20" fill="white" />
+  <rect x="45" y="70" width="10" height="20" fill="white" />
+  <rect x="65" y="70" width="10" height="20" fill="white" />
+
+  <!-- Stripes -->
+  <path d="M 25,30 V 70" stroke="black" stroke-width="4" />
+  <path d="M 40,30 V 70" stroke="black" stroke-width="4" />
+  <path d="M 55,30 V 70" stroke="black" stroke-width="4" />
+  <path d="M 70,30 V 70" stroke="black" stroke-width="4" />
+</svg>
