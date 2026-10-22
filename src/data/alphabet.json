@@ -1,288 +1,496 @@
 [
   {
     "id": "A",
-    "letter": { "upper": "A", "lower": "a" },
-    "word": { "text": "Apple", "translation": "苹果" },
+    "letter": {
+      "upper": "A",
+      "lower": "a"
+    },
+    "word": {
+      "text": "Apple",
+      "translation": "苹果"
+    },
     "audio": {
       "name": "/audio/letters/A.mp3",
-      "phonics": "/audio/letters/A.mp3",
+      "phonics": "/audio/phonics/A.mp3",
       "word": "/audio/words/Apple.mp3"
     },
-    "image": "/images/letters/apple.svg"
+    "image": "/images/letters/apple.svg",
+    "phonicsText": "a",
+    "phonicsOk": true
   },
   {
     "id": "B",
-    "letter": { "upper": "B", "lower": "b" },
-    "word": { "text": "Ball", "translation": "球" },
+    "letter": {
+      "upper": "B",
+      "lower": "b"
+    },
+    "word": {
+      "text": "Ball",
+      "translation": "球"
+    },
     "audio": {
       "name": "/audio/letters/B.mp3",
-      "phonics": "/audio/letters/B.mp3",
+      "phonics": "/audio/phonics/B.mp3",
       "word": "/audio/words/Ball.mp3"
     },
-    "image": "/images/letters/ball.svg"
+    "image": "/images/letters/ball.svg",
+    "phonicsText": "buh",
+    "phonicsOk": true
   },
   {
     "id": "C",
-    "letter": { "upper": "C", "lower": "c" },
-    "word": { "text": "Cat", "translation": "猫" },
+    "letter": {
+      "upper": "C",
+      "lower": "c"
+    },
+    "word": {
+      "text": "Cat",
+      "translation": "猫"
+    },
     "audio": {
       "name": "/audio/letters/C.mp3",
-      "phonics": "/audio/letters/C.mp3",
+      "phonics": "/audio/phonics/C.mp3",
       "word": "/audio/words/Cat.mp3"
     },
-    "image": "/images/letters/cat.svg"
+    "image": "/images/letters/cat.svg",
+    "phonicsText": "kuh",
+    "phonicsOk": true
   },
   {
     "id": "D",
-    "letter": { "upper": "D", "lower": "d" },
-    "word": { "text": "Dog", "translation": "狗" },
+    "letter": {
+      "upper": "D",
+      "lower": "d"
+    },
+    "word": {
+      "text": "Dog",
+      "translation": "狗"
+    },
     "audio": {
       "name": "/audio/letters/D.mp3",
-      "phonics": "/audio/letters/D.mp3",
+      "phonics": "/audio/phonics/D.mp3",
       "word": "/audio/words/Dog.mp3"
     },
-    "image": "/images/letters/dog.svg"
+    "image": "/images/letters/dog.svg",
+    "phonicsText": "duh",
+    "phonicsOk": true
   },
   {
     "id": "E",
-    "letter": { "upper": "E", "lower": "e" },
-    "word": { "text": "Elephant", "translation": "大象" },
+    "letter": {
+      "upper": "E",
+      "lower": "e"
+    },
+    "word": {
+      "text": "Elephant",
+      "translation": "大象"
+    },
     "audio": {
       "name": "/audio/letters/E.mp3",
-      "phonics": "/audio/letters/E.mp3",
+      "phonics": "/audio/phonics/E.mp3",
       "word": "/audio/words/Elephant.mp3"
     },
-    "image": "/images/letters/elephant.svg"
+    "image": "/images/letters/elephant.svg",
+    "phonicsText": "eh",
+    "phonicsOk": true
   },
   {
     "id": "F",
-    "letter": { "upper": "F", "lower": "f" },
-    "word": { "text": "Fish", "translation": "鱼" },
+    "letter": {
+      "upper": "F",
+      "lower": "f"
+    },
+    "word": {
+      "text": "Fish",
+      "translation": "鱼"
+    },
     "audio": {
       "name": "/audio/letters/F.mp3",
-      "phonics": "/audio/letters/F.mp3",
+      "phonics": "/audio/phonics/F.mp3",
       "word": "/audio/words/Fish.mp3"
     },
-    "image": "/images/letters/fish.svg"
+    "image": "/images/letters/fish.svg",
+    "phonicsText": "fff",
+    "phonicsOk": true
   },
   {
     "id": "G",
-    "letter": { "upper": "G", "lower": "g" },
-    "word": { "text": "Goat", "translation": "山羊" },
+    "letter": {
+      "upper": "G",
+      "lower": "g"
+    },
+    "word": {
+      "text": "Goat",
+      "translation": "山羊"
+    },
     "audio": {
       "name": "/audio/letters/G.mp3",
-      "phonics": "/audio/letters/G.mp3",
+      "phonics": "/audio/phonics/G.mp3",
       "word": "/audio/words/Goat.mp3"
     },
-    "image": "/images/letters/goat.svg"
+    "image": "/images/letters/goat.svg",
+    "phonicsText": "guh",
+    "phonicsOk": true
   },
   {
     "id": "H",
-    "letter": { "upper": "H", "lower": "h" },
-    "word": { "text": "Hat", "translation": "帽子" },
+    "letter": {
+      "upper": "H",
+      "lower": "h"
+    },
+    "word": {
+      "text": "Hat",
+      "translation": "帽子"
+    },
     "audio": {
       "name": "/audio/letters/H.mp3",
-      "phonics": "/audio/letters/H.mp3",
+      "phonics": "/audio/phonics/H.mp3",
       "word": "/audio/words/Hat.mp3"
     },
-    "image": "/images/letters/hat.svg"
+    "image": "/images/letters/hat.svg",
+    "phonicsText": "hah",
+    "phonicsOk": true
   },
   {
     "id": "I",
-    "letter": { "upper": "I", "lower": "i" },
-    "word": { "text": "Igloo", "translation": "冰屋" },
+    "letter": {
+      "upper": "I",
+      "lower": "i"
+    },
+    "word": {
+      "text": "Igloo",
+      "translation": "冰屋"
+    },
     "audio": {
       "name": "/audio/letters/I.mp3",
-      "phonics": "/audio/letters/I.mp3",
+      "phonics": "/audio/phonics/I.mp3",
       "word": "/audio/words/Igloo.mp3"
     },
-    "image": "/images/letters/igloo.svg"
+    "image": "/images/letters/igloo.svg",
+    "phonicsText": "ih",
+    "phonicsOk": true
   },
   {
     "id": "J",
-    "letter": { "upper": "J", "lower": "j" },
-    "word": { "text": "Juice", "translation": "果汁" },
+    "letter": {
+      "upper": "J",
+      "lower": "j"
+    },
+    "word": {
+      "text": "Juice",
+      "translation": "果汁"
+    },
     "audio": {
       "name": "/audio/letters/J.mp3",
-      "phonics": "/audio/letters/J.mp3",
+      "phonics": "/audio/phonics/J.mp3",
       "word": "/audio/words/Juice.mp3"
     },
-    "image": "/images/letters/juice.svg"
+    "image": "/images/letters/juice.svg",
+    "phonicsText": "juh",
+    "phonicsOk": true
   },
   {
     "id": "K",
-    "letter": { "upper": "K", "lower": "k" },
-    "word": { "text": "Kite", "translation": "风筝" },
+    "letter": {
+      "upper": "K",
+      "lower": "k"
+    },
+    "word": {
+      "text": "Kite",
+      "translation": "风筝"
+    },
     "audio": {
       "name": "/audio/letters/K.mp3",
-      "phonics": "/audio/letters/K.mp3",
+      "phonics": "/audio/phonics/K.mp3",
       "word": "/audio/words/Kite.mp3"
     },
-    "image": "/images/letters/kite.svg"
+    "image": "/images/letters/kite.svg",
+    "phonicsText": "kuh",
+    "phonicsOk": true
   },
   {
     "id": "L",
-    "letter": { "upper": "L", "lower": "l" },
-    "word": { "text": "Lion", "translation": "狮子" },
+    "letter": {
+      "upper": "L",
+      "lower": "l"
+    },
+    "word": {
+      "text": "Lion",
+      "translation": "狮子"
+    },
     "audio": {
       "name": "/audio/letters/L.mp3",
-      "phonics": "/audio/letters/L.mp3",
+      "phonics": "/audio/phonics/L.mp3",
       "word": "/audio/words/Lion.mp3"
     },
-    "image": "/images/letters/lion.svg"
+    "image": "/images/letters/lion.svg",
+    "phonicsText": "lll",
+    "phonicsOk": true
   },
   {
     "id": "M",
-    "letter": { "upper": "M", "lower": "m" },
-    "word": { "text": "Monkey", "translation": "猴子" },
+    "letter": {
+      "upper": "M",
+      "lower": "m"
+    },
+    "word": {
+      "text": "Monkey",
+      "translation": "猴子"
+    },
     "audio": {
       "name": "/audio/letters/M.mp3",
-      "phonics": "/audio/letters/M.mp3",
+      "phonics": "/audio/phonics/M.mp3",
       "word": "/audio/words/Monkey.mp3"
     },
-    "image": "/images/letters/monkey.svg"
+    "image": "/images/letters/monkey.svg",
+    "phonicsText": "mmm",
+    "phonicsOk": true
   },
   {
     "id": "N",
-    "letter": { "upper": "N", "lower": "n" },
-    "word": { "text": "Nest", "translation": "巢" },
+    "letter": {
+      "upper": "N",
+      "lower": "n"
+    },
+    "word": {
+      "text": "Nest",
+      "translation": "巢"
+    },
     "audio": {
       "name": "/audio/letters/N.mp3",
-      "phonics": "/audio/letters/N.mp3",
+      "phonics": "/audio/phonics/N.mp3",
       "word": "/audio/words/Nest.mp3"
     },
-    "image": "/images/letters/nest.svg"
+    "image": "/images/letters/nest.svg",
+    "phonicsText": "nnn",
+    "phonicsOk": true
   },
   {
     "id": "O",
-    "letter": { "upper": "O", "lower": "o" },
-    "word": { "text": "Octopus", "translation": "章鱼" },
+    "letter": {
+      "upper": "O",
+      "lower": "o"
+    },
+    "word": {
+      "text": "Octopus",
+      "translation": "章鱼"
+    },
     "audio": {
       "name": "/audio/letters/O.mp3",
-      "phonics": "/audio/letters/O.mp3",
+      "phonics": "/audio/phonics/O.mp3",
       "word": "/audio/words/Octopus.mp3"
     },
-    "image": "/images/letters/octopus.svg"
+    "image": "/images/letters/octopus.svg",
+    "phonicsText": "aw",
+    "phonicsOk": true
   },
   {
     "id": "P",
-    "letter": { "upper": "P", "lower": "p" },
-    "word": { "text": "Pig", "translation": "猪" },
+    "letter": {
+      "upper": "P",
+      "lower": "p"
+    },
+    "word": {
+      "text": "Pig",
+      "translation": "猪"
+    },
     "audio": {
       "name": "/audio/letters/P.mp3",
-      "phonics": "/audio/letters/P.mp3",
+      "phonics": "/audio/phonics/P.mp3",
       "word": "/audio/words/Pig.mp3"
     },
-    "image": "/images/letters/pig.svg"
+    "image": "/images/letters/pig.svg",
+    "phonicsText": "puh",
+    "phonicsOk": true
   },
   {
     "id": "Q",
-    "letter": { "upper": "Q", "lower": "q" },
-    "word": { "text": "Queen", "translation": "女王" },
+    "letter": {
+      "upper": "Q",
+      "lower": "q"
+    },
+    "word": {
+      "text": "Queen",
+      "translation": "女王"
+    },
     "audio": {
       "name": "/audio/letters/Q.mp3",
-      "phonics": "/audio/letters/Q.mp3",
+      "phonics": "/audio/phonics/Q.mp3",
       "word": "/audio/words/Queen.mp3"
     },
-    "image": "/images/letters/queen.svg"
+    "image": "/images/letters/queen.svg",
+    "phonicsText": "kwuh",
+    "phonicsOk": true
   },
   {
     "id": "R",
-    "letter": { "upper": "R", "lower": "r" },
-    "word": { "text": "Rabbit", "translation": "兔子" },
+    "letter": {
+      "upper": "R",
+      "lower": "r"
+    },
+    "word": {
+      "text": "Rabbit",
+      "translation": "兔子"
+    },
     "audio": {
       "name": "/audio/letters/R.mp3",
-      "phonics": "/audio/letters/R.mp3",
+      "phonics": "/audio/phonics/R.mp3",
       "word": "/audio/words/Rabbit.mp3"
     },
-    "image": "/images/letters/rabbit.svg"
+    "image": "/images/letters/rabbit.svg",
+    "phonicsText": "rrr",
+    "phonicsOk": true
   },
   {
     "id": "S",
-    "letter": { "upper": "S", "lower": "s" },
-    "word": { "text": "Sun", "translation": "太阳" },
+    "letter": {
+      "upper": "S",
+      "lower": "s"
+    },
+    "word": {
+      "text": "Sun",
+      "translation": "太阳"
+    },
     "audio": {
       "name": "/audio/letters/S.mp3",
-      "phonics": "/audio/letters/S.mp3",
+      "phonics": "/audio/phonics/S.mp3",
       "word": "/audio/words/Sun.mp3"
     },
-    "image": "/images/letters/sun.svg"
+    "image": "/images/letters/sun.svg",
+    "phonicsText": "sss",
+    "phonicsOk": true
   },
   {
     "id": "T",
-    "letter": { "upper": "T", "lower": "t" },
-    "word": { "text": "Tiger", "translation": "老虎" },
+    "letter": {
+      "upper": "T",
+      "lower": "t"
+    },
+    "word": {
+      "text": "Tiger",
+      "translation": "老虎"
+    },
     "audio": {
       "name": "/audio/letters/T.mp3",
-      "phonics": "/audio/letters/T.mp3",
+      "phonics": "/audio/phonics/T.mp3",
       "word": "/audio/words/Tiger.mp3"
     },
-    "image": "/images/letters/tiger.svg"
+    "image": "/images/letters/tiger.svg",
+    "phonicsText": "tuh",
+    "phonicsOk": true
   },
   {
     "id": "U",
-    "letter": { "upper": "U", "lower": "u" },
-    "word": { "text": "Umbrella", "translation": "雨伞" },
+    "letter": {
+      "upper": "U",
+      "lower": "u"
+    },
+    "word": {
+      "text": "Umbrella",
+      "translation": "雨伞"
+    },
     "audio": {
       "name": "/audio/letters/U.mp3",
-      "phonics": "/audio/letters/U.mp3",
+      "phonics": "/audio/phonics/U.mp3",
       "word": "/audio/words/Umbrella.mp3"
     },
-    "image": "/images/letters/umbrella.svg"
+    "image": "/images/letters/umbrella.svg",
+    "phonicsText": "uh",
+    "phonicsOk": true
   },
   {
     "id": "V",
-    "letter": { "upper": "V", "lower": "v" },
-    "word": { "text": "Violin", "translation": "小提琴" },
+    "letter": {
+      "upper": "V",
+      "lower": "v"
+    },
+    "word": {
+      "text": "Violin",
+      "translation": "小提琴"
+    },
     "audio": {
       "name": "/audio/letters/V.mp3",
-      "phonics": "/audio/letters/V.mp3",
+      "phonics": "/audio/phonics/V.mp3",
       "word": "/audio/words/Violin.mp3"
     },
-    "image": "/images/letters/violin.svg"
+    "image": "/images/letters/violin.svg",
+    "phonicsText": "vvv",
+    "phonicsOk": true
   },
   {
     "id": "W",
-    "letter": { "upper": "W", "lower": "w" },
-    "word": { "text": "Watch", "translation": "手表" },
+    "letter": {
+      "upper": "W",
+      "lower": "w"
+    },
+    "word": {
+      "text": "Watch",
+      "translation": "手表"
+    },
     "audio": {
       "name": "/audio/letters/W.mp3",
-      "phonics": "/audio/letters/W.mp3",
+      "phonics": "/audio/phonics/W.mp3",
       "word": "/audio/words/Watch.mp3"
     },
-    "image": "/images/letters/watch.svg"
+    "image": "/images/letters/watch.svg",
+    "phonicsText": "wuh",
+    "phonicsOk": true
   },
   {
     "id": "X",
-    "letter": { "upper": "X", "lower": "x" },
-    "word": { "text": "Xylophone", "translation": "木琴" },
+    "letter": {
+      "upper": "X",
+      "lower": "x"
+    },
+    "word": {
+      "text": "Xylophone",
+      "translation": "木琴"
+    },
     "audio": {
       "name": "/audio/letters/X.mp3",
-      "phonics": "/audio/letters/X.mp3",
+      "phonics": "/audio/phonics/X.mp3",
       "word": "/audio/words/Xylophone.mp3"
     },
-    "image": "/images/letters/xylophone.svg"
+    "image": "/images/letters/xylophone.svg",
+    "phonicsText": "ks",
+    "phonicsOk": true
   },
   {
     "id": "Y",
-    "letter": { "upper": "Y", "lower": "y" },
-    "word": { "text": "Yo-yo", "translation": "溜溜球" },
+    "letter": {
+      "upper": "Y",
+      "lower": "y"
+    },
+    "word": {
+      "text": "Yo-yo",
+      "translation": "溜溜球"
+    },
     "audio": {
       "name": "/audio/letters/Y.mp3",
-      "phonics": "/audio/letters/Y.mp3",
+      "phonics": "/audio/phonics/Y.mp3",
       "word": "/audio/words/Yo-yo.mp3"
     },
-    "image": "/images/letters/yo-yo.svg"
+    "image": "/images/letters/yo-yo.svg",
+    "phonicsText": "yuh",
+    "phonicsOk": true
   },
   {
     "id": "Z",
-    "letter": { "upper": "Z", "lower": "z" },
-    "word": { "text": "Zebra", "translation": "斑马" },
+    "letter": {
+      "upper": "Z",
+      "lower": "z"
+    },
+    "word": {
+      "text": "Zebra",
+      "translation": "斑马"
+    },
     "audio": {
       "name": "/audio/letters/Z.mp3",
-      "phonics": "/audio/letters/Z.mp3",
+      "phonics": "/audio/phonics/Z.mp3",
       "word": "/audio/words/Zebra.mp3"
     },
-    "image": "/images/letters/zebra.svg"
+    "image": "/images/letters/zebra.svg",
+    "phonicsText": "zzz",
+    "phonicsOk": true
   }
 ]

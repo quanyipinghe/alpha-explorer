@@ -1,0 +1,202 @@
+[
+ {
+  "id": "s1-01",
+  "stage": 1,
+  "type": "find-upper",
+  "letters": "ABCDEF",
+  "sticker": "🦄"
+ },
+ {
+  "id": "s1-02",
+  "stage": 1,
+  "type": "case-match",
+  "letters": "ABCDEF",
+  "sticker": "🐬"
+ },
+ {
+  "id": "s1-03",
+  "stage": 1,
+  "type": "find-upper",
+  "letters": "GHIJKL",
+  "sticker": "🦋"
+ },
+ {
+  "id": "s1-04",
+  "stage": 1,
+  "type": "case-match",
+  "letters": "GHIJKL",
+  "sticker": "🐢"
+ },
+ {
+  "id": "s1-05",
+  "stage": 1,
+  "type": "find-upper",
+  "letters": "MNOPQR",
+  "sticker": "🦁"
+ },
+ {
+  "id": "s1-06",
+  "stage": 1,
+  "type": "case-match",
+  "letters": "MNOPQR",
+  "sticker": "🐼"
+ },
+ {
+  "id": "s1-07",
+  "stage": 1,
+  "type": "find-upper",
+  "letters": "STUVWXYZ",
+  "sticker": "🐨"
+ },
+ {
+  "id": "s1-08",
+  "stage": 1,
+  "type": "case-match",
+  "letters": "STUVWXYZ",
+  "sticker": "🦒"
+ },
+ {
+  "id": "s1-09",
+  "stage": 1,
+  "type": "find-lower",
+  "sticker": "🐙"
+ },
+ {
+  "id": "s1-10",
+  "stage": 1,
+  "type": "next-letter",
+  "sticker": "🦀"
+ },
+ {
+  "id": "s2-01",
+  "stage": 2,
+  "type": "sound-letter",
+  "letters": "SATPIN",
+  "sticker": "🐝"
+ },
+ {
+  "id": "s2-02",
+  "stage": 2,
+  "type": "first-letter",
+  "letters": "SATPIN",
+  "sticker": "🦉"
+ },
+ {
+  "id": "s2-03",
+  "stage": 2,
+  "type": "sound-letter",
+  "letters": "CEHRMD",
+  "sticker": "🐧"
+ },
+ {
+  "id": "s2-04",
+  "stage": 2,
+  "type": "first-letter",
+  "letters": "CEHRMD",
+  "sticker": "🦓"
+ },
+ {
+  "id": "s2-05",
+  "stage": 2,
+  "type": "sound-letter",
+  "letters": "GOULFB",
+  "sticker": "🦔"
+ },
+ {
+  "id": "s2-06",
+  "stage": 2,
+  "type": "first-letter",
+  "letters": "GOULFB",
+  "sticker": "🦕"
+ },
+ {
+  "id": "s3-01",
+  "stage": 3,
+  "type": "word-picture",
+  "words": [
+   "cat",
+   "hat",
+   "bat",
+   "map",
+   "van",
+   "bag",
+   "cap",
+   "rat"
+  ],
+  "sticker": "🦖"
+ },
+ {
+  "id": "s3-02",
+  "stage": 3,
+  "type": "missing-vowel",
+  "words": [
+   "cat",
+   "hat",
+   "bat",
+   "map",
+   "van",
+   "bag",
+   "cap",
+   "rat",
+   "bed",
+   "hen",
+   "net",
+   "pen",
+   "red",
+   "ten",
+   "web",
+   "leg"
+  ],
+  "sticker": "🐳"
+ },
+ {
+  "id": "s3-03",
+  "stage": 3,
+  "type": "word-picture",
+  "words": [
+   "bed",
+   "hen",
+   "net",
+   "pen",
+   "red",
+   "ten",
+   "web",
+   "leg",
+   "pig",
+   "pin",
+   "lip",
+   "zip"
+  ],
+  "sticker": "🦜"
+ },
+ {
+  "id": "s3-04",
+  "stage": 3,
+  "type": "word-picture",
+  "words": [
+   "dog",
+   "box",
+   "fox",
+   "pot",
+   "hot",
+   "sun",
+   "bus",
+   "cup",
+   "bug",
+   "nut"
+  ],
+  "sticker": "🌈"
+ },
+ {
+  "id": "s3-05",
+  "stage": 3,
+  "type": "missing-vowel",
+  "sticker": "🚀"
+ },
+ {
+  "id": "s3-06",
+  "stage": 3,
+  "type": "word-picture",
+  "sticker": "🏆"
+ }
+]

@@ -63,3 +63,83 @@ export function recordResult(progress, levelId, stars, now) {
   const stickers = progress.stickers.indexOf(levelId) < 0 ? progress.stickers.concat(levelId) : progress.stickers;
   return { levels, stickers, allUnlocked: progress.allUnlocked };
 }
+
+// Levels unlock in order; the parent can unlock everything.
+export const isUnlocked = (levels, progress, index) =>
+  index === 0 || progress.allUnlocked || !!(levels[index - 1] && progress.levels[levels[index - 1].id] && progress.levels[levels[index - 1].id].stars >= 1);
+
+const PROMPT = (key) => `/audio/prompts/${key}.mp3`;
+export const PROMPTS = {
+  find: 'Find the letter', next: 'What comes next?', sound: 'Which letter makes this sound?',
+  first: 'What letter does it start with?', picture: 'Which picture is it?', missing: 'Which letter is missing?',
+  great: 'Great job!', again: "Let's try again!",
+};
+const VOWELS = ['a', 'e', 'i', 'o', 'u'];
+const cvcAudio = (w) => `/audio/cvc/${w.word}.mp3`;
+const vowelOf = (w) => w.word[1];
+
+// Three distinct options: the answer plus two from the level pool, topped up from `all` if the pool is small.
+function pickOptions(answer, pool, all, rand) {
+  const others = shuffle(pool.filter((x) => x !== answer), rand);
+  const extra = shuffle(all.filter((x) => x !== answer && others.indexOf(x) < 0), rand);
+  return shuffle([answer].concat(others.concat(extra).slice(0, 2)), rand);
+}
+
+// Each type: which items can be a target, and how one target becomes a question.
+const TYPES = {
+  'find-upper': { letters: true, q: (t, c) => ({ prompt: [PROMPT('find'), t.audio.name], say: [t.audio.name], show: { kind: 'listen' }, options: c.letterOpts(t, (a) => a.letter.upper) }) },
+  'find-lower': { letters: true, q: (t, c) => ({ prompt: [PROMPT('find'), t.audio.name], say: [t.audio.name], show: { kind: 'listen' }, options: c.letterOpts(t, (a) => a.letter.lower) }) },
+  'case-match': { letters: true, q: (t, c) => ({ prompt: [PROMPT('find'), t.audio.name], say: [t.audio.name], show: { kind: 'letter', text: t.letter.upper }, options: c.letterOpts(t, (a) => a.letter.lower) }) },
+  'next-letter': {
+    letters: true,
+    ok: (t, c) => c.index(t) >= 2,
+    q: (t, c) => {
+      const a = c.alphabet[c.index(t) - 2], b = c.alphabet[c.index(t) - 1];
+      return { prompt: [a.audio.name, b.audio.name, PROMPT('next')], say: [t.audio.name], show: { kind: 'seq', seq: [a.letter.upper, b.letter.upper] }, options: c.letterOpts(t, (x) => x.letter.upper) };
+    },
+  },
+  'sound-letter': { letters: true, ok: (t) => t.phonicsOk, q: (t, c) => ({ prompt: [PROMPT('sound'), t.audio.phonics], say: [t.audio.phonics, t.audio.name], show: { kind: 'listen' }, options: c.letterOpts(t, (a) => a.letter.upper + a.letter.lower) }) },
+  // No word text on screen: the child would just read off its first letter.
+  'first-letter': { letters: true, q: (t, c) => ({ prompt: [PROMPT('first'), t.audio.word], say: [t.audio.word, t.audio.name], show: { kind: 'picture', image: t.image }, options: c.letterOpts(t, (a) => a.letter.upper + a.letter.lower) }) },
+  'word-picture': { letters: false, q: (t, c) => ({ prompt: [PROMPT('picture'), cvcAudio(t)], say: [cvcAudio(t)], show: { kind: 'listen' }, options: c.wordOpts(t) }) },
+  'missing-vowel': {
+    letters: false,
+    q: (t, c) => ({
+      prompt: [PROMPT('missing'), cvcAudio(t)], say: [cvcAudio(t)],
+      show: { kind: 'missing', before: t.word[0], after: t.word[2], emoji: t.emoji },
+      options: pickOptions(vowelOf(t), [], VOWELS, c.rand).map((v) => ({ id: v, label: v })),
+    }),
+  },
+};
+
+export function makeLevel(level, alphabet, cvc, rand = Math.random) {
+  const type = TYPES[level.type];
+  if (!type) throw new Error('unknown level type ' + level.type);
+  const pool = type.letters
+    ? (level.letters ? alphabet.filter((a) => level.letters.indexOf(a.id) >= 0) : alphabet)
+    : (level.words ? cvc.filter((w) => level.words.indexOf(w.word) >= 0) : cvc);
+  const ctx = { alphabet, rand, index: (t) => alphabet.indexOf(t) };
+  const byId = (list, key) => (id) => list.filter((x) => x[key] === id)[0];
+  ctx.letterOpts = (t, label) => {
+    const ids = pickOptions(t.id, pool.map((a) => a.id), alphabet.map((a) => a.id), rand);
+    return ids.map(byId(alphabet, 'id')).map((a) => ({ id: a.id, label: label(a) }));
+  };
+  ctx.wordOpts = (t) => {
+    const ids = pickOptions(t.word, pool.map((w) => w.word), cvc.map((w) => w.word), rand);
+    return ids.map(byId(cvc, 'word')).map((w) => ({ id: w.word, label: w.emoji }));
+  };
+  const targets = pool.filter((t) => !type.ok || type.ok(t, ctx));
+  if (!targets.length) throw new Error('no targets for level ' + level.id);
+  let deck = [];
+  const questions = [];
+  while (questions.length < 8) {
+    if (!deck.length) deck = shuffle(targets, rand);
+    const t = deck.pop();
+    const q = type.q(t, ctx);
+    q.answer = type.letters ? t.id : (level.type === 'missing-vowel' ? vowelOf(t) : t.word);
+    questions.push(q);
+  }
+  // Warm-up shows at most 4 cards so a whole-alphabet level doesn't open with 26 of them.
+  const warmup = shuffle(pool, rand).slice(0, 4).map((x) => (type.letters ? { kind: 'letter', letter: x } : { kind: 'blend', word: x }));
+  return { warmup, questions };
+}
