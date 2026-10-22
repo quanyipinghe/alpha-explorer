@@ -1,3 +1,6 @@
+> **已过时**:本文是最初的触屏版构想。描红、拖拽配对、游戏乐园、成就墙已经去掉,
+> 现行设计见 `docs/superpowers/specs/2026-10-22-tv-quest-design.md`(电视遥控器闯关版)。
+
 # 项目设计文档：字母探险家 (Alpha-Explorer)
 
 **1. 项目概述 (Project Overview)**

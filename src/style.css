@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body { background: #bae6fd; font-family: 'Nunito', 'Varela Round', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+button { transition: transform .15s; }
+/* The focus ring is how a kid with a remote knows where they are: make it loud.
+   Plain :focus because Chrome 66 has no :focus-visible. */
+button:focus, a:focus { outline: 6px solid #FF7F50; outline-offset: 4px; transform: scale(1.08); }
+[aria-disabled="true"] { opacity: .5; }
+
+@keyframes stamp { 0% { transform: scale(3) rotate(-20deg); opacity: 0; } 60% { transform: scale(.9) rotate(5deg); opacity: 1; } 100% { transform: scale(1) rotate(0); } }
+.stamp { animation: stamp .6s ease-out both; }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
+.shake { animation: shake .3s; }
+@keyframes glow { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.25); } }
+.glow { animation: glow .5s; color: #f97316; }
