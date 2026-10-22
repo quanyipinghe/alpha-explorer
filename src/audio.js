@@ -7,7 +7,12 @@ let finishCurrent = null;
 function playOne(src) {
   return new Promise((resolve) => {
     let started = false;
+    let finished = false;
+    // Runs once: a failed clip fires `error` and later rejects play(); the second call
+    // would otherwise clear the handlers of the clip playing after it.
     const done = () => {
+      if (finished) return;
+      finished = true;
       clearTimeout(startTimer);
       clearTimeout(endTimer);
       player.onplaying = player.onended = player.onerror = null;

@@ -67,3 +67,31 @@ for (const lv of LEVELS) for (const q of makeLevel(lv, ALPHA, CVC).questions)
   for (const p of q.prompt.concat(q.say)) assert.ok(files.has(p.slice(1)), `${lv.id}: no job for ${p}`);
 for (const a of ALPHA) for (const p of [a.audio.name, a.audio.word, a.audio.phonics]) assert.ok(files.has(p.slice(1)), p);
 console.log('audio ok');
+
+// ---- Final review fixes ----
+assert.deepEqual(parseProgress('{"levels":null,"stickers":[]}'), emptyProgress()); // would white-screen the map
+
+// audio.js: a late play() rejection from a failed clip must not clear the next clip's handlers.
+let fake;
+class FakeAudio {
+  constructor() { fake = this; }
+  play() {
+    const src = this.src;
+    return new Promise((res, rej) => {
+      if (src === 'bad') { setTimeout(() => this.onerror && this.onerror(), 5); setTimeout(() => rej(new Error('NotSupported')), 20); }
+      else setTimeout(() => this.onplaying && this.onplaying(), 5);
+    });
+  }
+  pause() {}
+}
+globalThis.Audio = FakeAudio;
+const { playSeq } = await import('./src/audio.js');
+let finished = false;
+const run = playSeq(['bad', 'good']).then(() => { finished = true; });
+await new Promise((r) => setTimeout(r, 60)); // 'bad' errored, then its play() rejected late; 'good' is playing
+assert.equal(finished, false, 'good clip still playing');
+assert.equal(typeof fake.onended, 'function', "late rejection wiped the good clip's handlers");
+fake.onended();
+await run;
+console.log('audio runtime ok');
+process.exit(0); // audio.js leaves its 8 s safety timers behind

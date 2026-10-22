@@ -48,7 +48,7 @@ export const emptyProgress = () => ({ levels: {}, stickers: [], allUnlocked: fal
 export function parseProgress(str) {
   try {
     const p = JSON.parse(str);
-    if (p && typeof p.levels === 'object' && !Array.isArray(p.levels) && Array.isArray(p.stickers)) {
+    if (p && p.levels && typeof p.levels === 'object' && !Array.isArray(p.levels) && Array.isArray(p.stickers)) {
       return { levels: p.levels, stickers: p.stickers, allUnlocked: !!p.allUnlocked };
     }
   } catch (e) { /* corrupt storage: start fresh */ }
