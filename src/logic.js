@@ -143,3 +143,17 @@ export function makeLevel(level, alphabet, cvc, rand = Math.random) {
   const warmup = shuffle(pool, rand).slice(0, 4).map((x) => (type.letters ? { kind: 'letter', letter: x } : { kind: 'blend', word: x }));
   return { warmup, questions };
 }
+
+// Every clip the app plays, with the text Kokoro reads for it. `ipa: true` = text is phonemes.
+// Files are relative to public/.
+export function audioJobs(alphabet, cvc) {
+  const jobs = [];
+  alphabet.forEach((a) => {
+    jobs.push({ file: a.audio.name.slice(1), text: a.letter.upper });
+    jobs.push({ file: a.audio.word.slice(1), text: a.word.text });
+    jobs.push({ file: a.audio.phonics.slice(1), text: a.phonicsText, ipa: true });
+  });
+  cvc.forEach((w) => jobs.push({ file: `audio/cvc/${w.word}.mp3`, text: w.word }));
+  Object.keys(PROMPTS).forEach((k) => jobs.push({ file: `audio/prompts/${k}.mp3`, text: PROMPTS[k] }));
+  return jobs;
+}

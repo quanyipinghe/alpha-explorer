@@ -15,7 +15,7 @@
       "word": "/audio/words/Apple.mp3"
     },
     "image": "/images/letters/apple.svg",
-    "phonicsText": "a",
+    "phonicsText": "ˈæ",
     "phonicsOk": true
   },
   {
@@ -34,7 +34,7 @@
       "word": "/audio/words/Ball.mp3"
     },
     "image": "/images/letters/ball.svg",
-    "phonicsText": "buh",
+    "phonicsText": "bə",
     "phonicsOk": true
   },
   {
@@ -53,7 +53,7 @@
       "word": "/audio/words/Cat.mp3"
     },
     "image": "/images/letters/cat.svg",
-    "phonicsText": "kuh",
+    "phonicsText": "kə",
     "phonicsOk": true
   },
   {
@@ -72,7 +72,7 @@
       "word": "/audio/words/Dog.mp3"
     },
     "image": "/images/letters/dog.svg",
-    "phonicsText": "duh",
+    "phonicsText": "də",
     "phonicsOk": true
   },
   {
@@ -91,7 +91,7 @@
       "word": "/audio/words/Elephant.mp3"
     },
     "image": "/images/letters/elephant.svg",
-    "phonicsText": "eh",
+    "phonicsText": "ˈɛ",
     "phonicsOk": true
   },
   {
@@ -129,7 +129,7 @@
       "word": "/audio/words/Goat.mp3"
     },
     "image": "/images/letters/goat.svg",
-    "phonicsText": "guh",
+    "phonicsText": "ɡə",
     "phonicsOk": true
   },
   {
@@ -148,7 +148,7 @@
       "word": "/audio/words/Hat.mp3"
     },
     "image": "/images/letters/hat.svg",
-    "phonicsText": "hah",
+    "phonicsText": "hə",
     "phonicsOk": true
   },
   {
@@ -167,7 +167,7 @@
       "word": "/audio/words/Igloo.mp3"
     },
     "image": "/images/letters/igloo.svg",
-    "phonicsText": "ih",
+    "phonicsText": "ˈɪ",
     "phonicsOk": true
   },
   {
@@ -186,7 +186,7 @@
       "word": "/audio/words/Juice.mp3"
     },
     "image": "/images/letters/juice.svg",
-    "phonicsText": "juh",
+    "phonicsText": "ʤə",
     "phonicsOk": true
   },
   {
@@ -205,7 +205,7 @@
       "word": "/audio/words/Kite.mp3"
     },
     "image": "/images/letters/kite.svg",
-    "phonicsText": "kuh",
+    "phonicsText": "kə",
     "phonicsOk": true
   },
   {
@@ -281,7 +281,7 @@
       "word": "/audio/words/Octopus.mp3"
     },
     "image": "/images/letters/octopus.svg",
-    "phonicsText": "aw",
+    "phonicsText": "ˈɑ",
     "phonicsOk": true
   },
   {
@@ -300,7 +300,7 @@
       "word": "/audio/words/Pig.mp3"
     },
     "image": "/images/letters/pig.svg",
-    "phonicsText": "puh",
+    "phonicsText": "pə",
     "phonicsOk": true
   },
   {
@@ -319,7 +319,7 @@
       "word": "/audio/words/Queen.mp3"
     },
     "image": "/images/letters/queen.svg",
-    "phonicsText": "kwuh",
+    "phonicsText": "kwə",
     "phonicsOk": true
   },
   {
@@ -338,7 +338,7 @@
       "word": "/audio/words/Rabbit.mp3"
     },
     "image": "/images/letters/rabbit.svg",
-    "phonicsText": "rrr",
+    "phonicsText": "ɹɹɹ",
     "phonicsOk": true
   },
   {
@@ -376,7 +376,7 @@
       "word": "/audio/words/Tiger.mp3"
     },
     "image": "/images/letters/tiger.svg",
-    "phonicsText": "tuh",
+    "phonicsText": "tə",
     "phonicsOk": true
   },
   {
@@ -395,7 +395,7 @@
       "word": "/audio/words/Umbrella.mp3"
     },
     "image": "/images/letters/umbrella.svg",
-    "phonicsText": "uh",
+    "phonicsText": "ˈʌ",
     "phonicsOk": true
   },
   {
@@ -433,7 +433,7 @@
       "word": "/audio/words/Watch.mp3"
     },
     "image": "/images/letters/watch.svg",
-    "phonicsText": "wuh",
+    "phonicsText": "wə",
     "phonicsOk": true
   },
   {
@@ -471,7 +471,7 @@
       "word": "/audio/words/Yo-yo.mp3"
     },
     "image": "/images/letters/yo-yo.svg",
-    "phonicsText": "yuh",
+    "phonicsText": "jə",
     "phonicsOk": true
   },
   {

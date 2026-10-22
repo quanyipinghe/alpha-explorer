@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node test.mjs"
+    "test": "node test.mjs",
+    "tts": "node scripts/tts.mjs"
   },
   "dependencies": {
     "gsap": "^3.13.0",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.0",
     "autoprefixer": "^10.4.17",
+    "kokoro-js": "^1.2.1",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.1",
     "vite": "^5.3.5"

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
-import { makeLevel, isUnlocked } from './src/logic.js';
+import { makeLevel, isUnlocked, audioJobs } from './src/logic.js';
 import { starsFor, parseProgress, emptyProgress, recordResult, nearest, mathGate } from './src/logic.js';
 
 assert.deepEqual([5, 6, 7, 8].map(starsFor), [0, 1, 2, 3]);
@@ -58,3 +58,12 @@ assert.equal(isUnlocked(LEVELS, emptyProgress(), 1), false);
 assert.equal(isUnlocked(LEVELS, recordResult(emptyProgress(), LEVELS[0].id, 1, 0), 1), true);
 assert.equal(isUnlocked(LEVELS, Object.assign(emptyProgress(), { allUnlocked: true }), 5), true);
 console.log('levels ok');
+
+// ---- Task 3: audio ----
+const JOBS = audioJobs(ALPHA, CVC);
+const files = new Set(JOBS.map((j) => j.file));
+for (const f of files) assert.ok(existsSync(new URL('./public/' + f, import.meta.url)), 'missing audio ' + f);
+for (const lv of LEVELS) for (const q of makeLevel(lv, ALPHA, CVC).questions)
+  for (const p of q.prompt.concat(q.say)) assert.ok(files.has(p.slice(1)), `${lv.id}: no job for ${p}`);
+for (const a of ALPHA) for (const p of [a.audio.name, a.audio.word, a.audio.phonics]) assert.ok(files.has(p.slice(1)), p);
+console.log('audio ok');
