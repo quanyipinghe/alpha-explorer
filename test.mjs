@@ -66,6 +66,7 @@ for (const f of files) assert.ok(existsSync(new URL('./public/' + f, import.meta
 for (const lv of LEVELS) for (const q of makeLevel(lv, ALPHA, CVC).questions)
   for (const p of q.prompt.concat(q.say)) assert.ok(files.has(p.slice(1)), `${lv.id}: no job for ${p}`);
 for (const a of ALPHA) for (const p of [a.audio.name, a.audio.word, a.audio.phonics]) assert.ok(files.has(p.slice(1)), p);
+assert.equal(JOBS.find((j) => j.file === 'audio/letters/B.mp3').text, 'B!'); // bare "B" -> "bee-a"
 console.log('audio ok');
 
 // ---- Final review fixes ----

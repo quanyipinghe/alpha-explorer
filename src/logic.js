@@ -149,8 +149,12 @@ export function makeLevel(level, alphabet, cvc, rand = Math.random) {
 export function audioJobs(alphabet, cvc) {
   const jobs = [];
   alphabet.forEach((a) => {
-    jobs.push({ file: a.audio.name.slice(1), text: a.letter.upper });
-    jobs.push({ file: a.audio.word.slice(1), text: a.word.text });
+    // Bare "B" / "Watch" make Kokoro trail or swallow the ending; the "!" closes the clip cleanly.
+    // nameIpa/nameFilter: hand-tuned letters the plain text reads wrong (E slid to "ay", F read "af").
+    jobs.push(a.nameIpa
+      ? { file: a.audio.name.slice(1), text: a.nameIpa, ipa: true, filter: a.nameFilter }
+      : { file: a.audio.name.slice(1), text: a.letter.upper + '!' });
+    jobs.push({ file: a.audio.word.slice(1), text: a.word.text + '!' });
     jobs.push({ file: a.audio.phonics.slice(1), text: a.phonicsText, ipa: true });
   });
   cvc.forEach((w) => jobs.push({ file: `audio/cvc/${w.word}.mp3`, text: w.word }));

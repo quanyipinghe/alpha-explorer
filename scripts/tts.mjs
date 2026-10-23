@@ -25,6 +25,10 @@ walk(join(PUB, 'audio'));
 const todo = process.argv.includes('--missing') ? jobs.filter((j) => !existsSync(join(PUB, j.file))) : jobs;
 if (todo.length) {
   const tts = await KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX', { dtype: 'fp32', device: 'cpu' });
+  // espeak spells affricates as two symbols (dʒ, tʃ) but Kokoro was trained on single ʤ/ʧ;
+  // left split, J reads as "d"+"zh". generate() also goes through this tokenizer.
+  const tok = tts.tokenizer;
+  tts.tokenizer = (s, o) => tok(s.replace(/dʒ/g, 'ʤ').replace(/tʃ/g, 'ʧ'), o);
   const wav = join(tmpdir(), 'alpha-tts.wav');
   for (const j of todo) {
     // Letter sounds can't be spelled as English text, so feed phonemes straight to the model.
@@ -33,7 +37,7 @@ if (todo.length) {
       : await tts.generate(j.text, { voice: 'af_heart' });
     await audio.save(wav);
     mkdirSync(dirname(join(PUB, j.file)), { recursive: true });
-    execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', wav, '-ac', '1', '-b:a', '48k', join(PUB, j.file)]);
+    execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', wav, ...(j.filter ? ['-af', j.filter] : []), '-ac', '1', '-b:a', '48k', join(PUB, j.file)]);
     console.log('  +', j.file);
   }
 }
