@@ -4,9 +4,11 @@
 
 html, body { background: #bae6fd; font-family: 'Nunito', 'Varela Round', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
 button { transition: transform .15s; }
-/* The focus ring is how a kid with a remote knows where they are: make it loud.
-   Plain :focus because Chrome 66 has no :focus-visible. */
-button:focus, a:focus { outline: 6px solid #FF7F50; outline-offset: 4px; transform: scale(1.08); }
+/* Focus is how a kid with a remote knows where they are: fill it with a colour no button uses.
+   Plain :focus because Chrome 66 has no :focus-visible. The green answer reveal is focused
+   right after a correct pick, so it keeps its own colour. */
+button:focus, a:focus { outline: none; transform: scale(1.08); }
+button:focus:not(.bg-green-400), a:focus { background-color: #7c3aed !important; color: #fff !important; }
 [aria-disabled="true"] { opacity: .5; }
 
 @keyframes stamp { 0% { transform: scale(3) rotate(-20deg); opacity: 0; } 60% { transform: scale(.9) rotate(5deg); opacity: 1; } 100% { transform: scale(1) rotate(0); } }
